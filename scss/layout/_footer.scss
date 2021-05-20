@@ -7,11 +7,12 @@ footer {
   .footer-nav {
     width: auto;
     padding-top: 20px;
-    margin: 0 auto;
+    // margin: 0 auto;
     text-align: center;
     border-bottom: 1px solid white;
     @include overTab {
       width: 800px;
+      margin: 0 auto;
     }
     ul {
       display: flex;
@@ -35,6 +36,20 @@ footer {
       font-size: 25px;
     }
   }
+  li{
+    width: 25%;
+    @include overTab {
+      width: inherit;
+    }
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    @include overTab {
+      display: flex;
+    }
+  }
+  
   .footer-box p {
     font-size: 20px;
   }

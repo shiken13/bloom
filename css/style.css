@@ -37,7 +37,6 @@ main {
 
 .header {
   overflow: hidden;
-  width: auto;
 }
 
 .header .header-fixed {
@@ -47,8 +46,8 @@ main {
           align-items: center;
   position: fixed;
   top: 0;
-  right: 0;
-  width: 100px;
+  left: 0;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   z-index: 50;
@@ -132,13 +131,12 @@ main {
 
 .header .nav {
   position: fixed;
-  left: 0;
   top: 0;
   width: 100%;
   height: auto;
   background-color: #000000CC;
-  padding-top: 145px;
-  z-index: 30;
+  padding-top: 60px;
+  z-index: 25;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -267,7 +265,6 @@ footer {
 footer .footer-nav {
   width: auto;
   padding-top: 20px;
-  margin: 0 auto;
   text-align: center;
   border-bottom: 1px solid white;
 }
@@ -275,6 +272,7 @@ footer .footer-nav {
 @media print, screen and (min-width: 768px) {
   footer .footer-nav {
     width: 800px;
+    margin: 0 auto;
   }
 }
 
@@ -300,6 +298,32 @@ footer .footer-nav a {
 @media print, screen and (min-width: 768px) {
   footer .footer-nav a {
     font-size: 25px;
+  }
+}
+
+footer li {
+  width: 25%;
+}
+
+@media print, screen and (min-width: 768px) {
+  footer li {
+    width: inherit;
+  }
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media print, screen and (min-width: 768px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -441,7 +465,7 @@ footer .copyright p {
 .welcome {
   position: absolute;
   z-index: 5;
-  width: 400px;
+  width: 380px;
   height: 200px;
   opacity: 0.7;
   top: 50%;
