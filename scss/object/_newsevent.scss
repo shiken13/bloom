@@ -1,0 +1,230 @@
+#news-class {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+
+  @include overTab {
+    // display: inherit;
+  }
+}
+.newsevent-whole{
+}
+
+#news {
+  margin: 0 auto;
+  width: 100%;
+  @include overTab {
+    width: 50%;
+  }
+  background-color: rgb(231, 226, 226);
+  background-image:
+  radial-gradient(#7bded9 5%, transparent 5%),
+  radial-gradient(#7bded9 5%, transparent 5%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  .news-area {
+    padding-right: 10px;
+    padding-left:5px;
+    @include overTab {
+      padding-left:100px;
+      padding-right: 50px;
+    }
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    @include overTab {
+      text-align: inherit;
+    }
+  }
+  .news-item{
+    display: flex;
+    &:not(:first-of-type) {
+      padding-top: 20px;
+      margin-top: 18px;
+      border-top: 1px dotted #13171b ;
+    }
+  }
+
+  a{
+    transition: all 0.6s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.61);
+    }
+  }
+
+  img {
+    width: 140px;
+  }
+  .news-content {
+    margin-left: 17px;
+    padding-left: 6px;
+    h2 {
+      font-weight: bold;
+      font-size: 12px;
+      @include overTab {
+        font-size: 15px;
+      }
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+
+}
+
+.news-link {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  @include overTab {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  a {
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #a48c61;
+      color: black;
+      font-weight: bold;
+      border:solid 1px black;
+    }
+  }
+}
+
+#event {
+  background-color: #ccc8c8;
+  background-image:url(../image/event-background.jpg);
+  width: 100%;
+  @include overTab {
+    width: 50%;
+  }
+
+  .event-image{
+    text-align: center;
+    @include overTab {
+      text-align: inherit;
+    }
+  }
+  
+  img {
+    width: 300px;
+    height: 200px;
+    border-radius: 30% 50% 50% 30% / 30% 30% 50% 50%;
+    @include overTab {
+      border-radius: 30% 70% 70% 30% / 30% 30% 50% 50%;
+      width: 450px;
+      height: 270px;
+    }
+  }
+  h1 {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    @include overTab {
+      text-align: inherit;
+    }
+  }
+  .event-area {
+    padding: 0;
+    @include overTab {
+      padding: 0 70px;
+    }
+  }
+  a {
+    color: white;
+    position: relative;
+    top: -50px;
+    right: -30px;
+    font-size: 20px;
+    text-shadow:1px 0 3px black;
+    @include overTab {
+      font-size: 30px;
+    }
+  }
+
+    
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  a::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: rgb(247, 242, 242);
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .5s;
+  }
+  a:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+  // 点滅
+  .heading07{
+        -webkit-animation:blink 1.2s ease-in-out infinite alternate;
+        -moz-animation:blink 1.2s ease-in-out infinite alternate;
+        animation:blink 1.2s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    @-moz-keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    @keyframes blink{
+        0% {opacity:0;}
+        100% {opacity:1;}
+
+    }
+    
+}
+
+.heading07 {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  @include overTab {
+    font-size: 26px;
+  }
+}
+
+.heading07 span {
+  position: relative;
+  z-index: 2;
+}
+
+.heading07::before {
+  content: attr(data-en);
+  position: absolute;
+  transform: rotate(-5deg);
+  top: -110px;
+  right: 50px;
+  color: white;
+  font-size: 50px;
+  font-family: luxus-brut, cursive;
+  font-style: italic;
+  @include overTab {
+    top: -150px;
+    font-size: 80px;
+  }
+}
+
+

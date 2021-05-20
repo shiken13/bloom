@@ -1,0 +1,19 @@
+.rec {
+  .rec-item {
+    display: flex;
+    flex-flow: column-reverse;
+    overflow: hidden;
+    @include overTab {
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    img {
+      width: 100%;
+      height: 140px;
+      @include overTab {
+        height: 170px;
+        width: 100%;
+      }
+    }
+  }
+}

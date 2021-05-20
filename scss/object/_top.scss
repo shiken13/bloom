@@ -1,0 +1,167 @@
+.top {
+  // 以下1行だけ（url)だと表示できていない場合あるから書き進める
+  background: url("../image/top1.jpg") center center no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 574px;
+  position: relative;
+  // header部分の重なり分の余白
+  @include overTab {
+    background-image: url("../image/top1.jpg");
+    height: 674px;
+    margin-top: 65px;
+  }
+
+  // 背景を暗くする
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .top-title1,
+  .top-title2,
+  .top-title3 {
+    color: white;
+    position: absolute;
+    // line-height: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-70%) translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    z-index: 10;
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff;
+
+    @include overTab {
+      font-size: 30px;
+    }
+  }
+  .top-title2 {
+    transform: translateY(-0%) translateX(-50%);
+    font-size: 25px;
+    @include overTab {
+      font-size: 30px;
+    }
+  }
+  .top-title3 {
+    transform: translateY(-140%) translateX(-50%);
+    font-size: 40px;
+    position: relative;
+    z-index: 10;
+    @include overTab {
+      font-size: 50px;
+    }
+  }
+
+  .top-sub-title {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(150%) translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    z-index: 2;
+    text-shadow: 0 0 10px #fff, 0 0 15px #fff;
+    @include overTab {
+      font-size: 25px;
+    }
+  }
+  .top-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-190%) translateX(-420%);
+    z-index: 10;
+    @include overTab {
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-170%) translateX(-370%);
+    }
+  }
+}
+
+
+
+.welcome {
+  position: absolute;
+  z-index: 5;
+  width: 400px;
+  height: 200px;
+  opacity: 0.7;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  @include overTab {
+    width: 1000px;
+    height: 500px;
+  }
+}
+
+#page_top {
+  overflow: hidden;
+  width: 70px;
+  height: 70px;
+  border: white 1px solid;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  background: black;
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 1000;
+
+  a {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    &::before {
+      // font-family: "Font Awesome 5 Free";
+      // font-weight: 900;
+      content: "";
+      font-size: 25px;
+      color: #fff;
+      position: absolute;
+      width: 20px;
+      height: 10px;
+      top: -50px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+      width: 0px;
+      border-style: solid;
+      border-width: 15px;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+    &::after {
+      content: "TOP";
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+}

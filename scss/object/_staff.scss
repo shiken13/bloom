@@ -1,0 +1,97 @@
+
+.staff{
+  background-color: #13171b;
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+  }
+  h1 {
+    padding-top: 35px;
+    padding-bottom:20px;
+    font-size: 35px;
+  }
+
+  img {
+    height: 200px;
+    width: 100%;
+    
+    position: relative;
+    // width: 30%;
+    transition: all 0.3s ease-out 0s;
+    
+    @include overTab {
+      height: 300px;
+      width: 250px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.9, 0.9);
+      filter: alpha(opacity=80);
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8;
+      opacity: 0.8;
+    }
+ 
+  }
+  .staff-slick{
+    margin: 0 auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    width:auto;
+    @include overTab {
+      margin: 0 auto;
+      width:1000px;
+    }
+  }
+  .staff-item{
+    width: 150px;
+    @include overTab {
+      width: 300px;
+    }
+  }
+
+  .staff-content{
+    padding-bottom: 20px;
+  }
+  // ドットの色を変更
+  .slick-dots li button:before {
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+  }
+   
+  .name{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    bottom:12px;
+    @include overTab {
+      bottom:8px;
+      font-size: 40px;
+    }
+  }
+  .job{
+    position: absolute;
+    color: white;
+    bottom: 0;
+  }
+}
+
+
+.rec {
+  .rec-item {
+      display: flex;
+      flex-flow: column-reverse;
+      overflow: hidden;
+      @include overTab {
+          margin-left: 1px;
+          margin-right: 1px;
+      }
+      img{
+          height: 170px;
+      }
+  }
+}
