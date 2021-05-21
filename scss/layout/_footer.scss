@@ -2,7 +2,10 @@ footer {
   background-color: black;
   border-top: 1px solid #ffffff2d;
   height: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 70px;
+  @include overTab {
+    padding-bottom: 40px;
+  }
 
   .footer-nav {
     width: auto;
@@ -28,7 +31,7 @@ footer {
   }
 
   .footer-nav a {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 10px;
     color: white;
     

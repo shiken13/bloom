@@ -75,12 +75,12 @@
     }
   }
   .top-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-190%) translateX(-420%);
+    transform: translateY(-280%) translateX(-50%);
     z-index: 10;
     @include overTab {
       width: 60px;
