@@ -47,7 +47,7 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100px;
+  width: 80px;
   padding-top: 20px;
   padding-bottom: 20px;
   z-index: 51;
@@ -996,6 +996,8 @@ footer .copyright p {
 #concept .concept-area {
   width: auto;
   padding: 30px 20px 0px 20px;
+  position: relative;
+  z-index: 50;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1132,6 +1134,8 @@ footer .copyright p {
 
 #concept .concept-link {
   padding-top: 0px;
+  position: relative;
+  z-index: 500;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1162,6 +1166,8 @@ footer .copyright p {
           justify-content: center;
   border-radius: 5px;
   font-size: 14px;
+  position: relative;
+  z-index: 500;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -1181,11 +1187,14 @@ footer .copyright p {
 #concept .box-3 {
   visibility: visible;
   position: relative;
+  z-index: 1;
   top: -130px;
   left: 100px;
 }
 
 #concept .box-3 img {
+  position: relative;
+  z-index: 1;
   width: 80%;
   height: 80%;
   border-radius: 25px;
